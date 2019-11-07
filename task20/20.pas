@@ -3,7 +3,7 @@
   
 begin
   read(amount);
-  max := 0;
+  max := integer.MinValue;
   for var i := 1 to amount do
   begin
     read(number);
