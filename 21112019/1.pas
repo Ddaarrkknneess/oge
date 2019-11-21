@@ -15,21 +15,17 @@ begin
   max := integer.MinValue;
   for var i := 1 to n do
   begin
-    if a[i] < min then min := a[i];
-    if a[i] > max then max := a[i];
-  end;
-  for var i := 1 to n do
-    if a[i] = min then
+    if a[i] < min then 
     begin
+      min := a[i];
       minIndex := i;
-      break;
     end;
-  for var i := 1 to n do
-    if a[i] = max then
-    begin
+    if a[i] > max then 
+    begin  
+      max := a[i];
       maxIndex := i;
-      break;
     end;
+  end;
   a[minIndex] := max;
   a[maxIndex] := min;
   writeln;
